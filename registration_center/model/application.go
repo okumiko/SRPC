@@ -14,13 +14,6 @@ type Application struct {
 	lock            sync.RWMutex
 }
 
-func NewApplication(appid string) *Application {
-	return &Application{
-		appid:     appid,
-		instances: make(map[string]*Instance),
-	}
-}
-
 //注册app add instance
 //返回 *Instance 实例信息
 //返回 bool true 已有实例升级 false 新增实例
@@ -42,6 +35,13 @@ func (app *Application) AddInstance(in *Instance, latestTimestamp int64) (*Insta
 	returnIns := new(Instance)
 	*returnIns = *in
 	return returnIns, !ok
+}
+
+func NewApplication(appid string) *Application {
+	return &Application{
+		appid:     appid,
+		instances: make(map[string]*Instance),
+	}
 }
 
 //续约

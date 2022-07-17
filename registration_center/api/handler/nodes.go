@@ -5,6 +5,10 @@ import (
 
 	"log"
 	"net/http"
+	"registration_center/configs"
+	"registration_center/global"
+	"registration_center/model"
+	"registration_center/pkg/errcode"
 )
 
 func NodesHandler(c *gin.Context) {

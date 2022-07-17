@@ -5,6 +5,9 @@ import (
 
 	"log"
 	"net/http"
+	"registration_center/global"
+	"registration_center/model"
+	"registration_center/pkg/errcode"
 )
 
 func FetchHandler(c *gin.Context) {

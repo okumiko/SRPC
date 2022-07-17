@@ -2,6 +2,7 @@ package api
 
 import (
 	"github.com/gin-gonic/gin"
+	"registration_center/api/handler"
 )
 
 func InitRouter() *gin.Engine {

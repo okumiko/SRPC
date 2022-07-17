@@ -2,9 +2,12 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-
 	"log"
 	"net/http"
+	"registration_center/configs"
+	"registration_center/global"
+	"registration_center/model"
+	"registration_center/pkg/errcode"
 )
 
 func RenewHandler(c *gin.Context) {

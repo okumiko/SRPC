@@ -5,6 +5,7 @@ import (
 
 	"log"
 	"net/http"
+	"registration_center/global"
 )
 
 func FetchAllHandler(c *gin.Context) {
